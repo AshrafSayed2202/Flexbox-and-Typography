@@ -1,0 +1,162 @@
+/* Apply a global font family and background color */
+body {
+    font-family: "Open Sans", sans-serif; /* Google font applied for readability */
+    background-color: #f4f4f4; /* Light gray background color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and navigation styles */
+header {
+    background-color: #333; /* Dark background for the header */
+    color: #fff; /* White text color */
+    padding: 15px 0; /* Padding for the header */
+    text-align: center; /* Center align the text in the header */
+}
+
+header nav ul {
+    display: flex; /* Apply Flexbox to the navigation list */
+    justify-content: center; /* Center the items horizontally */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+header nav ul li {
+    margin-right: 20px; /* Space between navigation items */
+}
+
+header nav ul li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+header nav ul li a {
+    color: white; /* White text color for the links */
+    text-decoration: none; /* Remove underline from the links */
+    font-size: 18px; /* Set font size for navigation links */
+}
+
+/* Blog post list and detailed content section (Flexbox Layout) */
+#blog-list {
+    display: flex; /* Use Flexbox for two-column layout */
+    flex-wrap: wrap; /* Allow wrapping of columns on smaller screens */
+    justify-content: space-between; /* Space out the columns */
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+#blog-list ul {
+    flex: 1; /* Allow the list to take up 50% of the width */
+    margin-right: 20px;
+}
+
+#blog-details {
+    flex: 2; /* Allow the detailed blog post to take up 70% of the width */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+@media screen and (max-width: 768px) {
+    #blog-list {
+        flex-direction: column; /* Stack columns vertically on small screens */
+    }
+
+    #blog-list ul,
+    #blog-details {
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+/* Blog post titles */
+h1,
+h2 {
+    font-family: "Playfair Display", serif; /* Serif font for blog titles */
+    color: #333; /* Dark text color for titles */
+    text-align: center; /* Center align the titles */
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem; /* Larger font size for main post titles */
+}
+
+h2 {
+    font-size: 2rem; /* Slightly smaller font size for subheadings */
+}
+
+/* Blog post styling */
+article {
+    background-color: #fff; /* White background for blog posts */
+    border: 1px solid #ddd; /* Light gray border around each post */
+    margin: 20px auto; /* Center the posts on the page */
+    padding: 20px; /* Padding around the content */
+    width: 80%; /* Make the posts take up 80% of the width */
+    box-sizing: border-box; /* Include padding and borders in width/height calculations */
+}
+
+article img {
+    display: block; /* Ensure the image doesn't have inline spacing */
+    margin: 0 auto; /* Center align the image */
+    max-width: 100%; /* Ensure images don't overflow */
+}
+
+/* Table styling for contact information */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove space between borders */
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 10px; /* Padding inside table cells */
+    text-align: left; /* Left align the text */
+    border: 1px solid #ddd; /* Light gray border for table cells */
+}
+
+table th {
+    background-color: #333; /* Dark background for the header row */
+    color: white; /* White text color for the header */
+}
+
+/* Form styling */
+form {
+    background-color: #fff; /* White background for the form */
+    border: 1px solid #ddd; /* Light gray border around the form */
+    margin-top: 20px;
+    padding: 20px;
+    width: 50%; /* Make the form take up 50% of the page width */
+    box-sizing: border-box; /* Include padding and borders in width/height calculations */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form input,
+form textarea {
+    width: 100%; /* Make the form elements take up full width */
+    padding: 10px; /* Padding inside form elements */
+    margin-bottom: 10px; /* Space below each element */
+    border: 1px solid #ddd; /* Light gray border for form fields */
+    box-sizing: border-box; /* Include padding and borders in width/height calculations */
+}
+
+form input[type="submit"] {
+    background-color: #333; /* Dark background color for submit button */
+    color: white; /* White text color for the submit button */
+    cursor: pointer; /* Change the cursor to a pointer */
+}
+
+form input[type="submit"]:hover {
+    background-color: #555; /* Darker background when hovering */
+}
+
+/* Footer styling */
+footer {
+    background-color: #333; /* Dark background color for the footer */
+    color: white; /* White text color */
+    text-align: center; /* Center align the footer text */
+    padding: 15px 0; /* Padding for the footer */
+    margin-top: 20px; /* Space above the footer */
+}
